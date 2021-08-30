@@ -1,0 +1,7 @@
+.header {
+  background-image: linear-gradient(180deg, #443f3fd5, #5c5c61d7),
+    url("../../../Images/peter-broomfield-m3m-lnR90uM-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
