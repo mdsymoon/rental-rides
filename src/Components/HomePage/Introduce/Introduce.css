@@ -1,0 +1,27 @@
+.introduce-title {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.introduce-text {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.offer-text {
+  color: rgb(129, 126, 126);
+}
+.offer-title {
+  font-weight: bold;
+}
+.offer-icon {
+  font-size: 60px;
+  padding: 10px;
+}
+.offer-icon-bulb {
+  font-size: 70px;
+  padding: 10px;
+}
+
+@media (max-width: 992px) {
+  
+}
