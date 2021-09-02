@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 
 const Contact = () => {
   return (
-    <div className="bg-dark">
+    <div  style={{backgroundColor:"#404040"}}>
       <div className="container">
         <div>
           <h1 className="text-center  py-5" style={{color:"#0285E4"}}>Contact With Us</h1>
