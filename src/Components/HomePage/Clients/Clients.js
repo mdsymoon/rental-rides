@@ -10,7 +10,7 @@ const Clients = () => {
         <div className="clients ">
            <div className="container">
            <div className="text-center pt-5">
-           <h1 style={{color:"#4A5764"}}>Our Clients</h1> 
+           <h1 style={{color:"#0285E4", paddingBottom:'20px'}}>Our Clients</h1> 
            <p>It is a long established fact that a reader will be distracted by the readable content of a page <br/> when looking at its layout</p>
            </div>
            <div className="flex  justify-content-center text-center">
