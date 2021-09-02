@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from '../Contact/Contact';
 import Header from '../Header/Header';
 import Introduce from './../Introduce/Introduce';
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <Introduce></Introduce>
+            <Contact></Contact>
         </div>
     );
 };
