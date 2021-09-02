@@ -46,7 +46,7 @@ const Introduce = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 text-center  ">
+          <div className="col-lg-6 text-center py-4 ">
             <img src={carImage} alt="" />
           </div>
           <div className="col-lg-3 ">
