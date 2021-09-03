@@ -2,6 +2,7 @@ import React from "react";
 import "./Navigation.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../../../Images/rental rides.png";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -13,12 +14,12 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav ">
           <Nav className="ms-auto ">
-            <Nav.Link href="#home" className="text-white">
+            <Link to="/" className="text-white">
               Home
-            </Nav.Link>
-            <Nav.Link href="#link" className="text-white">
-              Link
-            </Nav.Link>
+            </Link>
+            <Link to="/dashboard" className="text-white">
+              dashboard
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

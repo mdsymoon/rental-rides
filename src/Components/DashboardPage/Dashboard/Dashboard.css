@@ -1,0 +1,14 @@
+.sidebar-container{
+    background-color: #505066;
+  color: white;
+  height: 100vh;
+  padding: 20px 0px;
+}
+
+
+
+@media (max-width: 992px) {
+    .sidebar-container {
+      height: unset;
+    }
+  }
