@@ -1,0 +1,15 @@
+.service-price {
+  color: #0285e4;
+}
+
+.card {
+  width: 20rem;
+
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.card:hover {
+  transform: scale(1.1)!important;
+  box-shadow: 0px 0px 30px -2px;
+}
