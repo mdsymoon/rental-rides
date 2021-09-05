@@ -34,7 +34,7 @@ const AddService = () => {
   };
 
   return (
-    <div className="addService mt-5 ">
+    <div className="dashboard-form  mt-5 ">
       <h2>Add Service</h2>
       <Card>
         <Card.Body>
@@ -51,7 +51,7 @@ const AddService = () => {
                 <input className="form-control" type="file" placeholder="Service Price" {...register("file", { required: true })} onChange={handleFileChange} />
                 {errors.icon && <p className="text-danger">image is required</p>}
               </div>
-            <input type="submit" />
+            <input type="submit" className="form-button" />
           </form>
         </Card.Body>
       </Card>

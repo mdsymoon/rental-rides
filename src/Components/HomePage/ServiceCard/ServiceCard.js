@@ -9,8 +9,9 @@ const ServiceCard = ({ service }) => {
         Aos.init({ duration: 1900 })
       })
   return (
-    <div className="service-card col-lg-4 col-md-6 d-flex justify-content-center mb-5">
-      <Card className="card" data-aos="flip-up">
+    <div data-aos="flip-up" className=" col-lg-4 col-md-6 d-flex justify-content-center mb-5">
+      
+        <Card className="serviceCard" >
         <Card.Img
           variant="top"
           src={`data:image/png;base64,${service.img.img}`}
@@ -22,6 +23,7 @@ const ServiceCard = ({ service }) => {
          </div>
         </Card.Body>
       </Card>
+        
     </div>
   );
 };

@@ -6,6 +6,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Introduce from "./../Introduce/Introduce";
 import OurService from './../OurService/OurService';
+import CustomerReview from './../CustomerReview/CustomerReview';
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       <Introduce></Introduce>
       <OurService></OurService>
       <Clients></Clients>
-      <Circle></Circle>
+     <CustomerReview></CustomerReview>
       <Contact></Contact>
       <Footer></Footer>
     </div>

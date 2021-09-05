@@ -2,7 +2,10 @@ import React from 'react';
 import './Dashboard.css';
 import SideNavbar from '../SideNavbar/SideNavbar';
 import { Route } from 'react-router-dom';
+import Review from './../Review/Review';
 import AddService from './../AddService/AddService';
+import AddAdmin from '../AddAdmin/AddAdmin';
+
 
 const Dashboard = () => {
     return (
@@ -15,6 +18,12 @@ const Dashboard = () => {
                     <div className="col-lg-10">
                         <Route path="/dashboard/addService">
                             <AddService></AddService>
+                        </Route>
+                        <Route path="/dashboard/review">
+                            <Review></Review>
+                        </Route>
+                        <Route path="/dashboard/addAdmin">
+                           <AddAdmin></AddAdmin>
                         </Route>
                     </div>
                 </div>

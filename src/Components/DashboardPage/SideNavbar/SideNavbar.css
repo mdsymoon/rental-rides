@@ -13,9 +13,10 @@
     color: white;
     cursor: pointer;
     text-decoration: none;
+    transition:0.3s;
   }
 
   .side-nav-link:hover {
-    color: #fd4d4d;
+    color: #0285e4;
     text-decoration: none;
   }

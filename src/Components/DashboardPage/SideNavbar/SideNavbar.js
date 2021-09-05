@@ -18,6 +18,12 @@ const SideNavbar = () => {
                 <Link to="/dashboard" className="side-nav-link">
                 <AiOutlineHome />Dashboard
                 </Link>
+                <Link to="/dashboard/review" className="side-nav-link">
+                <AiOutlineHome />Review
+                </Link>
+                <Link to="/dashboard/addAdmin" className="side-nav-link">
+                <AiOutlineHome />Add Admin
+                </Link>
             </div>
             <div>
                <h5>Logout</h5>
