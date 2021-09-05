@@ -20,6 +20,9 @@ const Navigation = () => {
             <Link to="/dashboard" className="text-white">
               dashboard
             </Link>
+            <Link to="/login" className="text-white">
+              login
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
