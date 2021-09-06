@@ -8,19 +8,26 @@ import {
 } from "react-router-dom";
 import Dashboard from './Components/DashboardPage/Dashboard/Dashboard';
 import Login from './Components/LoginPage/Login';
+import { createContext, useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
+
+export const UserContext  = createContext();
 
 function App() {
+  const  [loggedInUser , setLoggedInUser] = useState({});
   return ( 
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      
     <Router>
     <Switch>
     <Route path="/about">
       
     </Route>
-    <Route path="/dashboard">
+    <PrivateRoute path="/dashboard">
       <Dashboard></Dashboard>
-    </Route>
+    </PrivateRoute>
     <Route path="/login">
       <Login></Login>
     </Route>
@@ -30,6 +37,7 @@ function App() {
   </Switch>
 
 </Router>
+</UserContext.Provider>
   );
 }
 

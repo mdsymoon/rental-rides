@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Review.css";
 import { useForm } from "react-hook-form";
 import { Card } from "react-bootstrap";
 import { useHistory } from 'react-router-dom';
+import { UserContext } from './../../../App';
 
 const Review = () => {
+  const [loggedInUser , setLoggedInUser] = useContext(UserContext);
+  
   const history = useHistory();
 
   const {
@@ -14,7 +17,9 @@ const Review = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    
     data.date = new Date().toDateString();
+    data.userImg = loggedInUser.userImg;
 
   fetch('http://localhost:4000/addReview' , {
     method: 'POST',

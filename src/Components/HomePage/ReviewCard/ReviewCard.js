@@ -12,6 +12,7 @@ const ReviewCard = ({ review }) => {
     <div  data-aos="flip-up" >
       <Card style={{maxWidth: '460px', margin: '10px 0px'}}>
         <Card.Body>
+          <img src={review.userImg} alt=""/>
           <Card.Title style={{color:"#1c3824"}}>{review.name}</Card.Title>
           <small>{review.date}</small>
           <p>{review.review}</p>
