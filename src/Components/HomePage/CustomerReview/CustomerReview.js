@@ -14,7 +14,7 @@ const CustomerReview = () => {
     })
     return (
         <div className="container">
-            <h1 className="text-center p-5" style={{color:'#0285E4'}}>Customer Review</h1>
+            <h1 className="text-center p-5" style={{color:'#11e6ed'}}>Customer  Review</h1>
             <div className="customer-review ">
                 {
                     reviews.map((review) => <ReviewCard review={review}></ReviewCard>)

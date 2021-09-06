@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import Review from './../Review/Review';
 import AddService from './../AddService/AddService';
 import AddAdmin from '../AddAdmin/AddAdmin';
+import Hire from '../Hire/Hire';
 
 
 const Dashboard = () => {
@@ -24,6 +25,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path="/dashboard/addAdmin">
                            <AddAdmin></AddAdmin>
+                        </Route>
+                        <Route path="/dashboard/hire">
+                           <Hire></Hire>
                         </Route>
                     </div>
                 </div>
