@@ -14,11 +14,14 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 export const UserContext  = createContext();
+export const serviceContext  = createContext();
 
 function App() {
   const  [loggedInUser , setLoggedInUser] = useState({});
+  const  [selectedService , setSelectedService] = useState(null);
   return ( 
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <serviceContext.Provider value={[selectedService, setSelectedService]}>
       
     <Router>
     <Switch>
@@ -37,6 +40,7 @@ function App() {
   </Switch>
 
 </Router>
+</serviceContext.Provider>
 </UserContext.Provider>
   );
 }
