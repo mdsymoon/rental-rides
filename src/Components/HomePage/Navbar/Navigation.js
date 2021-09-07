@@ -17,7 +17,7 @@ const Navigation = () => {
             <Link to="/" className="text-white">
               Home
             </Link>
-            <Link to="/dashboard" className="text-white">
+            <Link to="/dashboard/hiredCar" className="text-white">
               dashboard
             </Link>
             <Link to="/login" className="text-white">

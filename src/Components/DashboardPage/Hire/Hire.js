@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { serviceContext, UserContext } from '../../../App';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -10,7 +11,7 @@ const Hire = () => {
     const {register, handleSubmit,formState: { errors },} = useForm();
     const [selectedService , setSelectedService] = useContext(serviceContext);
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
-
+    const history  = useHistory(); 
     const onSubmit = (data) => {
          
     
@@ -28,7 +29,7 @@ const Hire = () => {
     })
     .then(res => res.json())
     .then(data  => {
-      // history.push('/dashboard')
+       history.push('/dashboard/hiredCar')
     })
   }
   

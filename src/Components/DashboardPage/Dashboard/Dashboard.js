@@ -6,6 +6,8 @@ import Review from './../Review/Review';
 import AddService from './../AddService/AddService';
 import AddAdmin from '../AddAdmin/AddAdmin';
 import Hire from '../Hire/Hire';
+import HiredCar from './../HiredCar/HiredCar';
+import HiredService from '../HiredService/HiredService';
 
 
 const Dashboard = () => {
@@ -28,6 +30,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path="/dashboard/hire">
                            <Hire></Hire>
+                        </Route>
+                        <Route path="/dashboard/hiredCar">
+                           <HiredService></HiredService>
                         </Route>
                     </div>
                 </div>
