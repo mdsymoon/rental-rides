@@ -34,7 +34,7 @@ const HiredService = () => {
           )}
         </div>
         {hired.map((hire) => (
-          <HiredCar key={hire._id} hire={hire}></HiredCar>
+          <HiredCar  hire={hire}></HiredCar>
         ))}
       </div>
     </div>

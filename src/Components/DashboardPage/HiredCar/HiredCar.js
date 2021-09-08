@@ -7,7 +7,7 @@ const HiredCar = ({ hire }) => {
       <Card style={{ width: "20rem" }}>
         <Card.Img
           variant="top"
-          src={`data:image/png;base64,${hire.img.img}`}
+          src={`data:image/png;base64,${hire.image?.img}`}
         />
         <Card.Body>
           <div className="d-flex justify-content-between">

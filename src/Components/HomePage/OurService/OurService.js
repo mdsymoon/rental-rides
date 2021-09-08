@@ -29,7 +29,7 @@ const OurService = () => {
             )}
           </div>
           {services.map((service) => (
-            <ServiceCard key={service._id} service={service}></ServiceCard>
+            <ServiceCard key={service._id} service={service} title={service.title} image={service.img} price={service.price}></ServiceCard>
           ))}
         </div>
       </div>

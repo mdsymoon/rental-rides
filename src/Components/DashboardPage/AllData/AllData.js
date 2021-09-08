@@ -28,7 +28,7 @@ const AllData = () => {
           </thead>
           <tbody>
             {allData.map((data) => (
-              <tr key={data._id}>
+              <tr >
                 <td>{data.name}</td>
                 <td>{data.email}</td>
                 <td>{data.service}</td>

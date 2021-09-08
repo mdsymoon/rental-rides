@@ -6,11 +6,11 @@ import { Card } from "react-bootstrap";
 import { serviceContext } from "../../../App";
 import { useHistory } from 'react-router-dom';
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ title, price ,image, service }) => {
   const [, setSelectedService] = useContext(serviceContext);
   const history = useHistory();
   const selectedCard =() => {
-    setSelectedService(service);
+    setSelectedService({title, price , image});
     history.push('/dashboard/hire');
   }
     useEffect(() => {

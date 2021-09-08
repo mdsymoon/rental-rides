@@ -10,17 +10,19 @@ const Hire = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [selectedService] = useContext(serviceContext);
-  const [loggedInUser] = useContext(UserContext);
+  const [selectedService , ] = useContext(serviceContext);
+  const [loggedInUser ,] = useContext(UserContext);
   const history = useHistory();
+
   const onSubmit = (data) => {
+    
     const orderData = {
       ...data,
       ...selectedService,
 
       orderDate: new Date().toDateString(),
     };
-
+    
     fetch("https://peaceful-beach-36227.herokuapp.com/hiredService", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -61,7 +63,7 @@ const Hire = () => {
             <div className="form-group mb-3">
               <input
                 className="form-control"
-                defaultValue={selectedService.title}
+                defaultValue={selectedService?.title}
                 {...register("service", { required: true })}
               />
               {errors.exampleRequired && (
@@ -69,9 +71,9 @@ const Hire = () => {
               )}
             </div>
 
-            <button className="form-button" type="submit">
-              Confirm
-            </button>
+            <input className="form-button" type="submit"/>
+              
+            
           </form>
         </Card.Body>
       </Card>
