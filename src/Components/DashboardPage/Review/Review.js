@@ -6,14 +6,13 @@ import { useHistory } from 'react-router-dom';
 import { UserContext } from './../../../App';
 
 const Review = () => {
-  const [loggedInUser , setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser ,] = useContext(UserContext);
   
   const history = useHistory();
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
@@ -32,7 +31,7 @@ const Review = () => {
   })
   } ;
 
-  console.log(watch("example"));
+  
   return (
     <div className="dashboard-form  mt-5 ">
         <h1>Give a review about our service</h1>

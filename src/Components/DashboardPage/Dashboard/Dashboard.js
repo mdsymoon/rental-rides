@@ -6,7 +6,6 @@ import Review from './../Review/Review';
 import AddService from './../AddService/AddService';
 import AddAdmin from '../AddAdmin/AddAdmin';
 import Hire from '../Hire/Hire';
-import HiredCar from './../HiredCar/HiredCar';
 import HiredService from '../HiredService/HiredService';
 import AllData from '../AllData/AllData';
 

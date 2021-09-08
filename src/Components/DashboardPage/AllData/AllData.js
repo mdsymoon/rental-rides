@@ -30,7 +30,7 @@ const AllData = () => {
                     <tbody>
                         {
                             allData.map(data => 
-                                <tr>
+                                <tr key={data._id}>
                                     <td>{data.name}</td>
                                     <td>{data.email}</td>
                                     <td>{data.service}</td>

@@ -7,17 +7,10 @@ import HiredCar from "./../HiredCar/HiredCar";
 
 const HiredService = () => {
   const [hired, setHired] = useState([]);
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser,] = useContext(UserContext);
   const [dataLoad, setDataLoad] = useState(false);
 
-  // useEffect(() => {
-  //     fetch('http://localhost:4000/hiredCar')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //         setHired(data);
-
-  //     },[])
-  // })
+  
 
   useEffect(() => {
     fetch(`http://localhost:4000/hiredCar`, {
@@ -43,7 +36,7 @@ const HiredService = () => {
           )}
         </div>
         {hired.map((hire) => (
-          <HiredCar hire={hire}></HiredCar>
+          <HiredCar key={hire._id} hire={hire}></HiredCar>
         ))}
       </div>
     </div>

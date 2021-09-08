@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, } from 'react';
 import { Card } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { serviceContext, UserContext } from '../../../App';
@@ -9,8 +9,8 @@ import { useHistory } from 'react-router-dom';
 
 const Hire = () => {
     const {register, handleSubmit,formState: { errors },} = useForm();
-    const [selectedService , setSelectedService] = useContext(serviceContext);
-    const [loggedInUser , setLoggedInUser] = useContext(UserContext);
+    const [selectedService ,] = useContext(serviceContext);
+    const [loggedInUser ,] = useContext(UserContext);
     const history  = useHistory(); 
     const onSubmit = (data) => {
          
@@ -54,7 +54,7 @@ const Hire = () => {
              {errors.exampleRequired && <p className="text-danger">Admin Email is required</p>}
             </div>
             
-            <input className="form-button" type="submit" />
+            <button className="form-button" type="submit">Confirm</button>
           </form>
         </Card.Body>
       </Card>

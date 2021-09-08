@@ -14,7 +14,7 @@ import { useHistory , useLocation } from 'react-router-dom';
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [, setLoggedInUser] = useContext(UserContext);
   const provider = new GoogleAuthProvider();
   const history = useHistory();
   const location = useLocation();
@@ -32,18 +32,9 @@ const Login = () => {
         };
         setLoggedInUser(newUser);
         history.replace(from);
-        console.log(loggedInUser);
-        console.log(newUser);
       })
       .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
+        
       });
   };
 

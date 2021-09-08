@@ -4,13 +4,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Dashboard from './Components/DashboardPage/Dashboard/Dashboard';
 import Login from './Components/LoginPage/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Contact from './Components/HomePage/Contact/Contact';
+
 
 
 

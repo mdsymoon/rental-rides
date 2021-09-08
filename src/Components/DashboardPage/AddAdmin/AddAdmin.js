@@ -10,7 +10,6 @@ const AddAdmin = () => {
     const {
       register,
       handleSubmit,
-      watch,
       formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
@@ -26,7 +25,7 @@ const AddAdmin = () => {
       history.push('/dashboard/hiredCar')
     })
     } ;
-    console.log(watch("example"));
+    
     return (
         <div className="dashboard-form mt-5 ">
         <h1>Add Admin</h1>

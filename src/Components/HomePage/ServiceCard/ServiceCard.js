@@ -7,7 +7,7 @@ import { serviceContext } from "../../../App";
 import { useHistory } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
-  const [selectedService , setSelectedService] = useContext(serviceContext);
+  const [, setSelectedService] = useContext(serviceContext);
   const history = useHistory();
   const selectedCard =() => {
     setSelectedService(service);
