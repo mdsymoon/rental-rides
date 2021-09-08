@@ -7,7 +7,7 @@ const OurService = () => {
   const [dataLoad, setDataLoad] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/services`)
+    fetch(`https://peaceful-beach-36227.herokuapp.com/services`)
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
@@ -22,11 +22,11 @@ const OurService = () => {
         </h1>
         <div className="card-container row pt-5">
           <div className="text-center">
-          {!dataLoad && (
-            <Spinner  animation="border" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </Spinner>
-          )}
+            {!dataLoad && (
+              <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
+            )}
           </div>
           {services.map((service) => (
             <ServiceCard key={service._id} service={service}></ServiceCard>

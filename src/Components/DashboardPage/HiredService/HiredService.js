@@ -7,13 +7,11 @@ import HiredCar from "./../HiredCar/HiredCar";
 
 const HiredService = () => {
   const [hired, setHired] = useState([]);
-  const [loggedInUser,] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   const [dataLoad, setDataLoad] = useState(false);
 
-  
-
   useEffect(() => {
-    fetch(`http://localhost:4000/hiredCar`, {
+    fetch(`https://peaceful-beach-36227.herokuapp.com/hiredCar`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
