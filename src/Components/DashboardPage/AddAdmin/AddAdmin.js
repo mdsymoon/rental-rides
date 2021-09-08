@@ -23,7 +23,7 @@ const AddAdmin = () => {
     })
     .then(res => res.json())
     .then(data => {
-      history.push('/dashboard')
+      history.push('/dashboard/hiredCar')
     })
     } ;
     console.log(watch("example"));
@@ -38,7 +38,7 @@ const AddAdmin = () => {
              {errors.exampleRequired && <p className="text-danger">Admin Name is required</p>}
             </div>
             <div className="form-group mb-3">
-            <input  className="form-control" placeholder="Admin Email" {...register("admin", { required: true })} />
+            <input  className="form-control" placeholder="Admin Email" {...register("email", { required: true })} />
              {errors.exampleRequired && <p className="text-danger">Admin Email is required</p>}
             </div>
             

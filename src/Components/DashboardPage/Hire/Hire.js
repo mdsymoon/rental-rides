@@ -16,8 +16,9 @@ const Hire = () => {
          
     
       const orderData = {
-        data,
-        selectedService,
+        ...data,
+        ...selectedService,
+        
          orderDate: new Date().toDateString()
       }
       

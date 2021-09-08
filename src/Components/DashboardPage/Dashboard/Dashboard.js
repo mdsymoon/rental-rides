@@ -8,6 +8,7 @@ import AddAdmin from '../AddAdmin/AddAdmin';
 import Hire from '../Hire/Hire';
 import HiredCar from './../HiredCar/HiredCar';
 import HiredService from '../HiredService/HiredService';
+import AllData from '../AllData/AllData';
 
 
 const Dashboard = () => {
@@ -33,6 +34,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path="/dashboard/hiredCar">
                            <HiredService></HiredService>
+                        </Route>
+                        <Route path="/dashboard/userData">
+                           <AllData></AllData>
                         </Route>
                     </div>
                 </div>
