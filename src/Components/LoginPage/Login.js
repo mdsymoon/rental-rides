@@ -48,31 +48,31 @@ const Login = () => {
   };
 
   return (
-    <div class="login-form mt-5">
+    <div className="login-form mt-5">
       <Form action="#">
-        <div class="title">Login</div>
-        <div class="input-box underline">
+        <div className="title">Login</div>
+        <div className="input-box underline">
           <input type="text" placeholder="Enter Your Email" required />
-          <div class="underline"></div>
+          <div className="underline"></div>
         </div>
-        <div class="input-box">
+        <div className="input-box">
           <input type="password" placeholder="Enter Your Password" required />
-          <div class="underline"></div>
+          <div className="underline"></div>
         </div>
-        <div class="input-box button">
+        <div className="input-box button">
           <input type="submit" name="" value="Continue" />
         </div>
       </Form>
-      <div class="option">or Connect With Social Media</div>
+      <div className="option">or Connect With Social Media</div>
       <div
-        class="google d-flex align-items-center justify-content-center"
+        className="google d-flex align-items-center justify-content-center"
         onClick={googleLogin}
       >
         <FcGoogle style={{ fontSize: "30px", marginRight: "10px" }} />
         <p style={{ marginTop: "15px" }}> Sign in With Google</p>
       </div>
 
-      <div class="facebook d-flex align-items-center justify-content-center">
+      <div className="facebook d-flex align-items-center justify-content-center">
         <img
           src={fbIcon}
           alt="Facebook"

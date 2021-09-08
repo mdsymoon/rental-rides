@@ -10,6 +10,7 @@ import Dashboard from './Components/DashboardPage/Dashboard/Dashboard';
 import Login from './Components/LoginPage/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Contact from './Components/HomePage/Contact/Contact';
 
 
 
@@ -25,12 +26,11 @@ function App() {
       
     <Router>
     <Switch>
-    <Route path="/about">
-      
-    </Route>
+    
     <PrivateRoute path="/dashboard">
       <Dashboard></Dashboard>
     </PrivateRoute>
+    
     <Route path="/login">
       <Login></Login>
     </Route>

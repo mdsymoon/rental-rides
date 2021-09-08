@@ -7,7 +7,7 @@ const Contact = () => {
     <div  style={{backgroundColor:"#404040"}}>
       <div className="container">
         <div>
-          <h1 className="text-center  py-5" style={{color:"#0285E4"}}>Contact With Us</h1>
+          <h1 idName="contact" className="text-center  py-5" style={{color:"#0285E4"}}>Contact With Us</h1>
           <div className="pb-5 px-3">
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">

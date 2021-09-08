@@ -56,7 +56,7 @@ const Introduce = () => {
                   <MdLightbulbOutline className="offer-icon-bulb"></MdLightbulbOutline>
                 </div>
                 <div>
-                  <p className="offer-title">Up-to-date Vehicles</p>
+                  <p className="offer-title">Best Company</p>
                   <p className="offer-text">
                     Lorem ipsum dolor sit amet,
                     <br /> consectetur adipisicing elit.
@@ -68,7 +68,7 @@ const Introduce = () => {
                   <GrClock className="offer-icon"></GrClock>
                 </div>
                 <div>
-                  <p className="offer-title">Up-to-date Vehicles</p>
+                  <p className="offer-title">Smooth Ride</p>
                   <p className="offer-text">
                     Lorem ipsum dolor sit amet,
                     <br /> consectetur adipisicing elit.
