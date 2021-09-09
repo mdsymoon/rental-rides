@@ -13,7 +13,7 @@ const OurService = () => {
         setServices(data);
         setDataLoad(true);
       });
-  }, [services]);
+  }, []);
   return (
     <div className="our-service">
       <div className="container">

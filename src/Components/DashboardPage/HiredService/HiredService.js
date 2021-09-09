@@ -21,7 +21,7 @@ const HiredService = () => {
         setHired(data);
         setDataLoad(true);
       });
-  });
+  },[loggedInUser.email]);
   return (
     <div className="mt-5">
       <h1 style={{ color: "#0285E4" }}>My Hired Car</h1>
@@ -33,9 +33,11 @@ const HiredService = () => {
             </Spinner>
           )}
         </div>
+        
         {hired.map((hire) => (
-          <HiredCar  hire={hire}></HiredCar>
+          <HiredCar key={hire._id} hire={hire}></HiredCar>
         ))}
+        
       </div>
     </div>
   );
