@@ -27,6 +27,9 @@ const HiredService = () => {
       
       <div className="row container" style={{ margin: "auto"  }}>
       <h1 >My Hired Car</h1>
+      {
+        !hired.length && <h3 className="text-center text-danger mt-5">NO ORDERS YET!</h3>
+      }
         <div className="text-center mt-4">
           {!dataLoad && (
             <Spinner animation="border" role="status">

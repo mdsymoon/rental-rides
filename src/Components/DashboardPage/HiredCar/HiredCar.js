@@ -1,7 +1,24 @@
 import React from "react";
+import './HiredCar.css';
 import { Badge, Card } from "react-bootstrap";
+import { useHistory } from 'react-router-dom';
 
 const HiredCar = ({ hire }) => {
+  const history = useHistory();
+  const handleCancel = (_id) => {
+    fetch('https://peaceful-beach-36227.herokuapp.com/deleteHired', {
+      method: 'DELETE' , 
+      headers: {'Content-Type' : 'application/json'},
+      body: JSON.stringify({_id})
+    })
+    .then(res => res.json())
+    .then(data => {
+      
+    })
+    history.push('/dashboard/CancelRide')
+  }
+
+  
   return (
     <div className="col-lg-4 col-md-6 d-flex justify-content-center my-5 " >
       <Card style={{ width: "20rem"}}>
@@ -28,6 +45,8 @@ const HiredCar = ({ hire }) => {
         }
           </h6>
           </div>
+
+          {(hire.orderStatus === "Hired") && <button className="cancel-button" onClick={()=>  handleCancel(hire._id) } >Cancel</button>}
           
           
         </Card.Body>
