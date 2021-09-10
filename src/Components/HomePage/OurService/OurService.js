@@ -15,7 +15,7 @@ const OurService = () => {
       });
   }, []);
   return (
-    <div className="our-service">
+    <div className="our-service" style={{overflow:"hidden"}}>
       <div className="container">
         <h1 className="text-center" style={{ color: "#0285E4" }}>
           Our Service

@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import {RiDeleteBin2Fill} from 'react-icons/ri'
 
 const AllData = () => {
   const [allData, setAllData] = useState([]);
@@ -40,8 +41,24 @@ const AllData = () => {
     }
   }, [orderStatus]);
 
+  const handleDelete = (_id) => {
+    fetch('https://peaceful-beach-36227.herokuapp.com/deleteHired', {
+      method: 'DELETE' , 
+      headers: {'Content-Type' : 'application/json'},
+      body: JSON.stringify({_id})
+    })
+    .then((res) => res.json())
+        .then((data) => {
+          fetch(`https://peaceful-beach-36227.herokuapp.com/allHiredCar`)
+            .then((res) => res.json())
+            .then((data) => {
+              setAllData(data);
+            });
+        });
+  }
+
   return (
-    <div>
+    <div className="mt-5">
       <h1> All User's Data</h1>
       <div>
         <Table style={{ minWidth: "700px" }} responsive>
@@ -53,6 +70,7 @@ const AllData = () => {
               <th>Price</th>
               <th>Hired Date</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -76,6 +94,9 @@ const AllData = () => {
                     <option value="Complete">Complete</option>
                   </select>
                 </td>
+                <td className="text-center text-danger" style={{fontSize:'24px', cursor:'pointer'}} onClick={()=> handleDelete(data._id)}>
+                  <RiDeleteBin2Fill/>
+                  </td>
               </tr>
             ))}
           </tbody>

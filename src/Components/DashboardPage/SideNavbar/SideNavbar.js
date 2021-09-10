@@ -8,6 +8,7 @@ import { HiReceiptRefund } from "react-icons/hi";
 import { IoMdPersonAdd } from "react-icons/io";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { ImDatabase } from "react-icons/im";
+import { BiLogOut } from "react-icons/bi";
 import { useHistory } from "react-router-dom";
 
 import { useState, useEffect, useContext } from "react";
@@ -66,7 +67,7 @@ const SideNavbar = () => {
           style={{ color: "goldenRod", cursor: "pointer" }}
           onClick={handleLogout}
         >
-          Logout{" "}
+          <BiLogOut/> Logout{" "}
         </h5>
       </div>
     </div>

@@ -8,6 +8,7 @@ import AddAdmin from '../AddAdmin/AddAdmin';
 import Hire from '../Hire/Hire';
 import HiredService from '../HiredService/HiredService';
 import AllData from '../AllData/AllData';
+import Payment from '../Payment/Payment';
 
 
 const Dashboard = () => {
@@ -15,7 +16,8 @@ const Dashboard = () => {
         <div className="dashboard">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-2 sidebar-container">
+                    
+                    <div className="col-lg-2 sidebar-container" >
                     <SideNavbar></SideNavbar>
                     </div>
                     <div className="col-lg-10">
@@ -36,6 +38,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path="/dashboard/userData">
                            <AllData></AllData>
+                        </Route>
+                        <Route path="/dashboard/payment">
+                           <Payment></Payment>
                         </Route>
                     </div>
                 </div>

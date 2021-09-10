@@ -4,7 +4,7 @@ import { Badge, Card } from "react-bootstrap";
 const HiredCar = ({ hire }) => {
   return (
     <div className="col-lg-4 col-md-6 d-flex justify-content-center my-5 " >
-      <Card style={{ width: "20rem" }}>
+      <Card style={{ width: "20rem"}}>
         <Card.Img
           variant="top"
           src={`data:image/png;base64,${hire.image?.img}`}

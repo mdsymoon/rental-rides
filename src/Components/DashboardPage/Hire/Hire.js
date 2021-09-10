@@ -30,7 +30,7 @@ const Hire = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        history.push("/dashboard/hiredCar");
+        history.push("/dashboard/payment");
       });
   };
 
@@ -71,7 +71,7 @@ const Hire = () => {
               )}
             </div>
 
-            <input className="form-button" type="submit"/>
+            <button className="form-button" type="submit">Proceed To Payment</button>
               
             
           </form>

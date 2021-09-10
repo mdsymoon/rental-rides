@@ -24,9 +24,10 @@ const HiredService = () => {
   },[loggedInUser.email]);
   return (
     <div className="mt-5">
-      <h1 style={{ color: "#0285E4" }}>My Hired Car</h1>
-      <div className="row container" style={{ margin: "auto" }}>
-        <div className="text-center mt-5">
+      
+      <div className="row container" style={{ margin: "auto"  }}>
+      <h1 >My Hired Car</h1>
+        <div className="text-center mt-4">
           {!dataLoad && (
             <Spinner animation="border" role="status">
               <span className="visually-hidden">Loading...</span>
