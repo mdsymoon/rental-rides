@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
+
 import ReviewCard from "../ReviewCard/ReviewCard";
 import "./CustomerReview.css";
-
+import spinnerGif from "../../../Images/Spinner-1s-200px.gif";
 const CustomerReview = () => {
   const [reviews, setReview] = useState([]);
   const [dataLoad, setDataLoad] = useState(false);
@@ -22,9 +22,7 @@ const CustomerReview = () => {
       </h1>
       <div className="customer-review ">
         {!dataLoad && (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <img src={spinnerGif} alt=""/>
         )}
         {reviews.map((review) => (
           <ReviewCard key={review._id} review={review}></ReviewCard>

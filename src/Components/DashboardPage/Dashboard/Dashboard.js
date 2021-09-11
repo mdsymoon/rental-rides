@@ -10,6 +10,7 @@ import HiredService from '../HiredService/HiredService';
 import AllData from '../AllData/AllData';
 import Payment from '../Payment/Payment';
 import CancelRide from '../CancelRide/CancelRide';
+import Email from '../Email/Email';
 
 
 const Dashboard = () => {
@@ -45,6 +46,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path="/dashboard/CancelRide">
                            <CancelRide></CancelRide>
+                        </Route>
+                        <Route path="/dashboard/mail">
+                           <Email></Email>
                         </Route>
                     </div>
                 </div>

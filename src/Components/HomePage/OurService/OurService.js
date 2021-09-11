@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Spinner } from "react-bootstrap";
 import ServiceCard from "./../ServiceCard/ServiceCard";
-
+import spinnerGif from "../../../Images/Spinner-1s-200px.gif";
 const OurService = () => {
   const [services, setServices] = useState([]);
   const [dataLoad, setDataLoad] = useState(false);
@@ -23,9 +22,7 @@ const OurService = () => {
         <div className="card-container row pt-5">
           <div className="text-center">
             {!dataLoad && (
-              <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </Spinner>
+              <img src={spinnerGif} alt=""/>
             )}
           </div>
           {services.map((service) => (

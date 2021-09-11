@@ -1,38 +1,75 @@
-import { Button } from "react-bootstrap";
 import React from "react";
-import { Form } from "react-bootstrap";
+
+import { useForm } from "react-hook-form";
+
 
 const Contact = () => {
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm();
+
+  const onSubmit = (data) => {
+    data.date = new Date().toDateString();
+    
+   
+    fetch("https://peaceful-beach-36227.herokuapp.com/postEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+       reset();
+
+      });
+  };
+
   return (
     <div  style={{backgroundColor:"#404040"}}>
       <div className="container">
         <div>
           <h1  className="text-center  py-5" style={{color:"#0285E4"}}>Contact With Us</h1>
           <div className="pb-5 px-3">
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="text-white">Email address</Form.Label>
-                <Form.Control type="email"  />
-                <Form.Text className="text-muted"></Form.Text>
-              </Form.Group>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group mb-3">
+              <input
+                className="form-control"
+                placeholder="Your Name"
+                {...register("name", { required: true })}
+              />
+              {errors.exampleRequired && (
+                <p className="text-danger">name is required</p>
+              )}
+            </div>
+            <div className="form-group mb-3">
+              <input
+                className="form-control"
+                placeholder="Subject"
+                {...register("subject", { required: true })}
+              />
+              {errors.exampleRequired && (
+                <p className="text-danger">subject is required</p>
+              )}
+            </div>
+            <div className="form-group mb-3">
+              <textarea
+                as="textarea"
+                rows={3}
+                className="form-control"
+                placeholder="Your Message"
+                {...register("message", { required: true })}
+              />
+              {errors.exampleRequired && (
+                <p className="text-danger">title is required</p>
+              )}
+            </div>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label className="text-white">Subject</Form.Label>
-                <Form.Control type="password"  />
-              </Form.Group>
-
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label className="text-white">Your Message</Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-
-              <Button variant="primary" type="button" style={{width:'150px', fontWeight:'bold'}}>
-                Done
-              </Button>
-            </Form>
+            <input className="form-button" type="submit" />
+          </form>
           </div>
         </div>
       </div>

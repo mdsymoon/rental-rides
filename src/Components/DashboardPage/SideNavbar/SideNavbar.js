@@ -9,6 +9,7 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { ImDatabase } from "react-icons/im";
 import { BiLogOut } from "react-icons/bi";
+import { RiMailStarLine } from "react-icons/ri";
 import { useHistory } from "react-router-dom";
 
 import { useState, useEffect, useContext } from "react";
@@ -56,8 +57,11 @@ const SideNavbar = () => {
             <Link to="/dashboard/addService" className="side-nav-link">
               <AiOutlineAppstoreAdd /> AddService
             </Link>
+            <Link to="/dashboard/mail" className="side-nav-link">
+              <RiMailStarLine /> Mail Box
+            </Link>
             <Link to="/dashboard/userData" className="side-nav-link">
-              <ImDatabase /> User Data
+              <ImDatabase /> All Orders
             </Link>
           </div>
         )}

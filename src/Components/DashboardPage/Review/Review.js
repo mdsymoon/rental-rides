@@ -38,8 +38,9 @@ const Review = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group mb-3">
               <input
+              defaultValue={loggedInUser.username}
                 className="form-control"
-                placeholder="Your Name"
+               placeholder="Your Name"
                 {...register("name", { required: true })}
               />
               {errors.exampleRequired && (

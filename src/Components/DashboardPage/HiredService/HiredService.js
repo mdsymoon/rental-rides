@@ -1,9 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useContext } from "react";
-import { Spinner } from "react-bootstrap";
+
 import { UserContext } from "../../../App";
 import HiredCar from "./../HiredCar/HiredCar";
+import spinnerGif from "../../../Images/Spinner-1s-200px.gif";
 
 const HiredService = () => {
   const [hired, setHired] = useState([]);
@@ -32,9 +33,7 @@ const HiredService = () => {
       }
         <div className="text-center mt-4">
           {!dataLoad && (
-            <Spinner animation="border" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </Spinner>
+            <img src={spinnerGif} alt=""/>
           )}
         </div>
         
