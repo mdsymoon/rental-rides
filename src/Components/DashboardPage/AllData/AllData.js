@@ -91,14 +91,15 @@ const AllData = () => {
                     className="form-select"
                     value={data.orderStatus}
                     name="orderStatus"
-                    onChange={(e) => {handleStatus(e, data._id);setLoadData(false)}}
+                    onChange={(e) => {
+                      handleStatus(e, data._id);
+                      setLoadData(false);
+                    }}
                   >
                     <option value="Hired">Hired</option>
                     <option value="On The Way">On The Way</option>
                     <option value="Complete">Complete</option>
-                    
                   </select>
-                  
                 </td>
                 <td
                   className="text-center text-danger"

@@ -22,7 +22,7 @@ const HiredService = () => {
         setHired(data);
         setDataLoad(true);
       });
-  },[loggedInUser.email]);
+  });
   return (
     <div className="mt-5">
       

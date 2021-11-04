@@ -14,7 +14,7 @@ const CustomerReview = () => {
         setReview(data);
         setDataLoad(true);
       });
-  }, []);
+  });
   return (
     <div className="container mb-3">
       <h1 className="text-center p-5" style={{ color: "#0285E4" }}>

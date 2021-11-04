@@ -14,7 +14,7 @@ const Email = () => {
             setEmail(data);
             setLoadData(true);
           });
-      }, []);
+      });
 
     return (
         <div className="container dashboard-form">
